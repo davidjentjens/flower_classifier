@@ -12,8 +12,8 @@ with open(category_names_path, 'r') as f:
 
 loaded_model = tf.keras.models.load_model(model_file, custom_objects={'KerasLayer':hub.KerasLayer})
 
-probs, classes = predict(image_path, loaded_model, 5)
+probs, classes = predict(image_path, loaded_model, top_k)
 
 top_class_names = [class_names[f'{i}'] for i in classes]
 
-print(classes)
+print(top_class_names)

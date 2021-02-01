@@ -21,7 +21,7 @@ def get_params():
   image_path = args_dict['image_path']
   model_file = args_dict['model_file']
 
-  top_k = args_dict['top_k']
+  top_k = int(args_dict['top_k'])
   if(top_k == None):
     top_k = 5
 
